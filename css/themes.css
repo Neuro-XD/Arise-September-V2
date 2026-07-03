@@ -1,0 +1,155 @@
+/* ============================================================
+   THEMES — color ramps for dark, light, purple, emerald
+   Each theme defines: bg, surface, text, border, accent ramps
+   ============================================================ */
+
+:root,
+[data-theme="dark"] {
+  --bg-base: #0a0a12;
+  --bg-gradient: radial-gradient(ellipse at top, #14142a 0%, #0a0a12 55%);
+  --surface-1: rgba(22, 22, 38, 0.6);
+  --surface-2: rgba(30, 30, 52, 0.7);
+  --surface-3: rgba(40, 40, 68, 0.8);
+  --surface-solid: #16162a;
+  --surface-hover: rgba(48, 48, 80, 0.6);
+
+  --text-primary: #f0f0fa;
+  --text-secondary: #a8a8c4;
+  --text-tertiary: #6c6c8a;
+
+  --border: rgba(120, 120, 200, 0.14);
+  --border-strong: rgba(140, 140, 220, 0.28);
+
+  --accent: #7c5cff;
+  --accent-bright: #9d7fff;
+  --accent-dim: rgba(124, 92, 255, 0.35);
+  --accent-glow: rgba(124, 92, 255, 0.45);
+  --accent-2: #3da9ff;
+  --accent-2-glow: rgba(61, 169, 255, 0.4);
+
+  --success: #2ee6a6;
+  --success-dim: rgba(46, 230, 166, 0.2);
+  --warning: #ffb547;
+  --warning-dim: rgba(255, 181, 71, 0.2);
+  --error: #ff5470;
+  --error-dim: rgba(255, 84, 112, 0.2);
+  --info: #3da9ff;
+  --info-dim: rgba(61, 169, 255, 0.2);
+
+  --rank-e: #8a8aa0;
+  --rank-d: #6fb8ff;
+  --rank-c: #2ee6a6;
+  --rank-b: #ffb547;
+  --rank-a: #ff5470;
+  --rank-s: #c47cff;
+  --rank-ss: #ff3df0;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 24px var(--accent-glow);
+
+  --glass-bg: rgba(22, 22, 38, 0.55);
+  --glass-border: rgba(140, 140, 220, 0.18);
+}
+
+[data-theme="light"] {
+  --bg-base: #f4f5fb;
+  --bg-gradient: radial-gradient(ellipse at top, #e8eaf6 0%, #f4f5fb 55%);
+  --surface-1: rgba(255, 255, 255, 0.7);
+  --surface-2: rgba(255, 255, 255, 0.85);
+  --surface-3: #ffffff;
+  --surface-solid: #ffffff;
+  --surface-hover: rgba(124, 92, 255, 0.06);
+
+  --text-primary: #1a1a2e;
+  --text-secondary: #4a4a68;
+  --text-tertiary: #8a8aa8;
+
+  --border: rgba(40, 40, 80, 0.1);
+  --border-strong: rgba(40, 40, 80, 0.2);
+
+  --accent: #6b3fff;
+  --accent-bright: #5a2fff;
+  --accent-dim: rgba(107, 63, 255, 0.2);
+  --accent-glow: rgba(107, 63, 255, 0.25);
+  --accent-2: #2b8fff;
+  --accent-2-glow: rgba(43, 143, 255, 0.25);
+
+  --success: #12b886;
+  --success-dim: rgba(18, 184, 134, 0.15);
+  --warning: #f59f00;
+  --warning-dim: rgba(245, 159, 0, 0.15);
+  --error: #e64980;
+  --error-dim: rgba(230, 73, 128, 0.15);
+  --info: #2b8fff;
+  --info-dim: rgba(43, 143, 255, 0.15);
+
+  --shadow-sm: 0 2px 8px rgba(40, 40, 80, 0.08);
+  --shadow-md: 0 8px 24px rgba(40, 40, 80, 0.1);
+  --shadow-lg: 0 20px 60px rgba(40, 40, 80, 0.12);
+  --shadow-glow: 0 0 24px var(--accent-glow);
+
+  --glass-bg: rgba(255, 255, 255, 0.65);
+  --glass-border: rgba(40, 40, 80, 0.12);
+}
+
+[data-theme="purple"] {
+  --bg-base: #0d0618;
+  --bg-gradient: radial-gradient(ellipse at top, #2a0f4d 0%, #0d0618 55%);
+  --surface-1: rgba(40, 16, 70, 0.6);
+  --surface-2: rgba(55, 22, 95, 0.7);
+  --surface-3: rgba(70, 30, 115, 0.8);
+  --surface-solid: #1a0a2e;
+  --surface-hover: rgba(80, 35, 130, 0.5);
+
+  --text-primary: #f5e9ff;
+  --text-secondary: #c4a8e8;
+  --text-tertiary: #8a6cb5;
+
+  --border: rgba(180, 120, 255, 0.16);
+  --border-strong: rgba(200, 140, 255, 0.3);
+
+  --accent: #c47cff;
+  --accent-bright: #d89dff;
+  --accent-dim: rgba(196, 124, 255, 0.35);
+  --accent-glow: rgba(196, 124, 255, 0.5);
+  --accent-2: #ff3df0;
+  --accent-2-glow: rgba(255, 61, 240, 0.4);
+
+  --glass-bg: rgba(40, 16, 70, 0.55);
+  --glass-border: rgba(200, 140, 255, 0.2);
+}
+
+[data-theme="emerald"] {
+  --bg-base: #04140e;
+  --bg-gradient: radial-gradient(ellipse at top, #0a3324 0%, #04140e 55%);
+  --surface-1: rgba(12, 40, 30, 0.6);
+  --surface-2: rgba(18, 55, 42, 0.7);
+  --surface-3: rgba(24, 70, 54, 0.8);
+  --surface-solid: #082018;
+  --surface-hover: rgba(30, 85, 65, 0.5);
+
+  --text-primary: #e6fff5;
+  --text-secondary: #8ad8b8;
+  --text-tertiary: #5a9a7a;
+
+  --border: rgba(80, 220, 160, 0.16);
+  --border-strong: rgba(100, 240, 180, 0.3);
+
+  --accent: #2ee6a6;
+  --accent-bright: #5cf0bd;
+  --accent-dim: rgba(46, 230, 166, 0.35);
+  --accent-glow: rgba(46, 230, 166, 0.45);
+  --accent-2: #3da9ff;
+  --accent-2-glow: rgba(61, 169, 255, 0.4);
+
+  --glass-bg: rgba(12, 40, 30, 0.55);
+  --glass-border: rgba(100, 240, 180, 0.2);
+}
+
+body {
+  background: var(--bg-base);
+  background-image: var(--bg-gradient);
+  background-attachment: fixed;
+}

@@ -1,0 +1,140 @@
+/* ============================================================
+   CALENDAR
+   ============================================================ */
+
+.calendar {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: var(--space-5);
+}
+.calendar__main {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+.calendar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-5);
+}
+.calendar__month {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.calendar__month small { color: var(--text-tertiary); font-weight: 400; font-family: var(--font-sans); margin-left: var(--space-2); }
+.calendar__nav { display: flex; gap: var(--space-2); }
+.calendar__nav-btn {
+  width: 36px; height: 36px;
+  display: grid; place-items: center;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  transition: all var(--dur-base);
+}
+.calendar__nav-btn:hover { background: var(--surface-hover); color: var(--text-primary); border-color: var(--border-strong); }
+
+.calendar__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+.calendar__weekday {
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+  padding: var(--space-2) 0;
+}
+.calendar__day {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  transition: all var(--dur-base) var(--ease-out);
+  position: relative;
+}
+.calendar__day:hover { background: var(--surface-hover); border-color: var(--border); color: var(--text-primary); }
+.calendar__day--other { opacity: 0.3; }
+.calendar__day--today {
+  background: linear-gradient(135deg, var(--accent-dim), transparent);
+  border-color: var(--accent);
+  color: var(--accent-bright);
+  font-weight: 700;
+}
+.calendar__day--today::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 16px var(--accent-glow);
+  pointer-events: none;
+}
+.calendar__day--selected {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+}
+.calendar__day--selected .calendar__dots span { background: #fff; }
+.calendar__dots { display: flex; gap: 3px; }
+.calendar__dots span {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.calendar__day--done .calendar__dots span { background: var(--success); }
+
+.calendar__side { display: flex; flex-direction: column; gap: var(--space-5); }
+.calendar__events { max-height: 320px; overflow-y: auto; }
+.cal-event {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--accent);
+  background: var(--surface-2);
+  margin-bottom: var(--space-2);
+  transition: all var(--dur-base);
+}
+.cal-event:hover { transform: translateX(4px); }
+.cal-event--done { opacity: 0.55; border-left-color: var(--success); }
+.cal-event--done .cal-event__title { text-decoration: line-through; }
+.cal-event__time { font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-tertiary); flex-shrink: 0; width: 44px; }
+.cal-event__body { flex: 1; min-width: 0; }
+.cal-event__title { font-size: 0.85rem; font-weight: 600; }
+.cal-event__meta { font-size: 0.72rem; color: var(--text-tertiary); }
+
+.countdown {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.countdown__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+}
+.countdown__label { font-size: 0.82rem; color: var(--text-secondary); }
+.countdown__time { font-family: var(--font-mono); font-weight: 700; color: var(--accent-bright); font-size: 0.85rem; }
+
+@media (max-width: 900px) {
+  .calendar { grid-template-columns: 1fr; }
+}

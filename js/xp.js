@@ -94,8 +94,10 @@ export const xp = {
     overlay.style.display = 'grid';
     this.confettiBurst();
     clearTimeout(this._levelUpTimer);
-    this._levelUpTimer = setTimeout(() => this.dismissLevelUp(), 4000);
-  },
+    this._levelUpTimer = setTimeout(
+    () => this.dismissLevelUp(),
+    2500
+);
 
   dismissLevelUp() {
     const overlay = document.getElementById('levelUp');
@@ -106,7 +108,7 @@ export const xp = {
       overlay.hidden = true;
       overlay.style.display = 'none';
       overlay.classList.remove('leaving');
-    }, 200);
+    }, 500);
   },
 
   confettiBurst() {

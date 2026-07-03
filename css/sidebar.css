@@ -289,3 +289,15 @@
   .topbar__search { display: none; }
   .topbar__streak { display: none; }
 }
+.no-logo{
+
+    justify-content:center;
+    text-align:center;
+
+}
+
+.no-logo .sidebar__title{
+
+    margin-left:0;
+
+}
